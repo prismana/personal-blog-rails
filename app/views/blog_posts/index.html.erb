@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+
+    <!-- Ruby Code -->
+    <% @blog_posts.each do |post| %>
+    <div>
+        <h2><%= link_to post.title, post %></h2>
+        <p><%= truncate_body(post.body) %></p>
+    </div>
+    <% end %>
+
+</body>
+</html>
